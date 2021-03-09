@@ -5,7 +5,7 @@
 # Author: Sofia Navarro
 # Date: 8/3/2021
 
-# In[86]:
+# In[1]:
 
 
 # Import all the necessary packages
@@ -18,12 +18,14 @@ from utils.imutils import jimshow
 from utils.imutils import jimshow_channel
 
 
-# In[71]:
+# In[3]:
 
 
 # define the path to the image
 text_image = os.path.join("..", "data", "_We_Hold_These_Truths__at_Jefferson_Memorial_IMG_4729.jpg")
 truths = cv2.imread(text_image)
+
+jimshow(truths)
 
 
 # In[72]:
@@ -40,11 +42,13 @@ truths.shape
 truths_ROI = cv2.rectangle(truths, (1300, 830), (2930, 2850), (0, 255, 0), 3)
 
 
-# In[74]:
+# In[87]:
 
 
 # Crop the image to include only the area marked by the rectangle using slicing 
 crop_ROI = truths_ROI[830:2850, 1300:2930]
+
+jimshow(crop_ROI)
 
 
 # In[75]:
@@ -125,6 +129,13 @@ jimshow(letters_image)
 # How many letters are in the image?
 print(f"The text in the image consists of {len(contours)} letters!")
 
+
+# I found the text on google, and counted the amount of characters manually, and it appears that there are actually only a bit over 500 letters/symbols in the text. However my result is 921. If we look at the image once more, we can see that there are several factors impacting the count of letters in the image:
+# 
+# 1. The colon on line 2 of the text has been marked as 2 different objects, even though graphically it is one symbol.
+# 2. The lines between the bricks have been marked as contours to objects even though they are not letters.
+# 3. The black symbol on top of the text has also been marked as an object
+# 4. Letters like 'O' and 'D' have in some cases been contoured both on the outside and inside, creating a double count for one symbol.
 
 # In[84]:
 
