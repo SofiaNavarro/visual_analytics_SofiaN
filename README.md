@@ -1,13 +1,11 @@
 # visual_analytics_SofiaN
-Weekly assignments for visual analytics
+This repository contains the three class assignments chosen for the portfolio. The self chosen project resides in another repository.
 
+In each 'Assignment' folder you will find:
 
-Feel free to clone the repository so 
-you have the necessary files, in this case the folder containing the images,
-at your disposal to be able to run my code.
+- A README.md file explaining how to set up the virtual environment as well as how to run the script
+- A bash script that creates the virtual environment
+- The main .py script
+- Requirements file
+- A utils file containing necessary tools for two of the assignments
 
-You should be able to download the .ipynb notebook and upload it to the 
-jupyter workspace under visual analytics and open it as a cv101 notebook.
-Also upload the image folder assOne_images in the "data" folder in the visual analytics jupyter workspace.
-
-I have also added a html version of the code. But I don't actually think you can interact with it.
