@@ -1,6 +1,6 @@
 ## Instructions
 
-First you need to build the virtual environment ass1 by running create_visual_venv.sh. You do this by opening a terminal and making sure you have cd into the 'Assignment 1' folder, then write:
+First you need to build the virtual environment ass1 by running create_visual_venv.sh. You do this by opening a terminal and making sure you have ```cd'ed``` into the 'Assignment 1' folder, then write:
 ```
 ./create_visual_venv.sh
 ```
